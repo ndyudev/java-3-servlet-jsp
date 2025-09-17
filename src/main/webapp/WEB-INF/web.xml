@@ -9,4 +9,24 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>HelloServlet</display-name>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>ndyudev.lab1.cau1.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/HelloServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CRUDServlet</display-name>
+    <servlet-name>CRUDServlet</servlet-name>
+    <servlet-class>ndyudev.lab1.crud.CRUDServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CRUDServlet</servlet-name>
+    <url-pattern>/CRUDServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
