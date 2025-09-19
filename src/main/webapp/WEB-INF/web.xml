@@ -29,4 +29,14 @@
     <servlet-name>CRUDServlet</servlet-name>
     <url-pattern>/CRUDServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Lab2Slider</display-name>
+    <servlet-name>Lab2Slider</servlet-name>
+    <servlet-class>ndyudev.lab2.slider.Lab2Slider</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Lab2Slider</servlet-name>
+    <url-pattern>/Lab2Slider</url-pattern>
+  </servlet-mapping>
 </web-app>
