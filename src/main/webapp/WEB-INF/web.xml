@@ -39,4 +39,24 @@
     <servlet-name>Lab2Slider</servlet-name>
     <url-pattern>/Lab2Slider</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Cau2</display-name>
+    <servlet-name>Cau2</servlet-name>
+    <servlet-class>ndyudev.lab1.Cau2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cau2</servlet-name>
+    <url-pattern>/Cau2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HomeServlet</display-name>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>ndyudev.lab1.cau5.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/HomeServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
