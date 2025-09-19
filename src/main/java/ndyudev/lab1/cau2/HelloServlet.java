@@ -1,4 +1,4 @@
-package ndyudev.lab1.cau1;
+package ndyudev.lab1.cau2;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
