@@ -37,7 +37,7 @@ public class Lab2Slider extends HttpServlet {
 		
 		List<Student> list = new ArrayList<>();
 		
-		Student student1 = new Student("Duy", 18);
+
 		
 		list.add(student1);
 		
