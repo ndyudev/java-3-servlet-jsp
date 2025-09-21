@@ -36,6 +36,7 @@ public class Lab2Slider extends HttpServlet {
 		boolean gioitinh = true;
 		
 		List<Student> list = new ArrayList<>();
+				List<Student> list = new ArrayList<>();
 		
 
 		
