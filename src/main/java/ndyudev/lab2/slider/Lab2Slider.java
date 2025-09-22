@@ -36,11 +36,6 @@ public class Lab2Slider extends HttpServlet {
 		boolean gioitinh = true;
 		
 		List<Student> list = new ArrayList<>();
-				List<Student> list = new ArrayList<>();
-		
-
-		
-		list.add(student1);
 		
 		request.setAttribute("username", fullName);
 		request.setAttribute("message", "Welcome to JSP + Servlet demo! 🚀");
