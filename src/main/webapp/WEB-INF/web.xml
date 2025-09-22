@@ -59,4 +59,24 @@
     <servlet-name>HomeServlet</servlet-name>
     <url-pattern>/HomeServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TagServlet</display-name>
+    <servlet-name>TagServlet</servlet-name>
+    <servlet-class>ndyudev.lab2.slider.TagServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TagServlet</servlet-name>
+    <url-pattern>/TagServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Thue</display-name>
+    <servlet-name>Thue</servlet-name>
+    <servlet-class>ndyudev.lab2.slider.Thue</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Thue</servlet-name>
+    <url-pattern>/Thue</url-pattern>
+  </servlet-mapping>
 </web-app>
