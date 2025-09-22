@@ -18,15 +18,15 @@ public class CRUDServlet extends HttpServlet {
 		String ctx = req.getContextPath();
 		String path = uri.substring(ctx.length());
 		String message;
-		if (path.equals("/crud/create")) {
+		if (uri.contains("/crud/create")) {
 			message = "Bạn vừa gọi CREATE!";
-		} else if (path.equals("/crud/update")) {
+		} else if (uri.contains("/crud/update")) {
 			message = "Bạn vừa gọi UPDATE!";
-		} else if (path.equals("/crud/delete")) {
+		} else if (uri.contains("/crud/delete")) {
 			message = "Bạn vừa gọi DELETE!";
-		} else if (path.startsWith("/crud/edit/")) {
+		} else if (uri.contains("/crud/edit/")) {
 			String id = path.substring("/crud/edit/".length()); // lấy phần sau edit/
-			message = "Bạn vừa gọi EDIT với id = " + id;
+			message = "Bạn vừa gọi EDIT với ixd = " + id;
 		} else {
 			message = "Không biết yêu cầu gì!";
 		}
@@ -35,6 +35,6 @@ public class CRUDServlet extends HttpServlet {
 //        resp.setContentType("application/json;charset=UTF-8");
 
 		resp.setContentType("text/html;charset=UTF-8");
-		resp.getWriter().println("<h2>" + message + "</h2>");
+		resp.getWriter().println("<h2>" + "Hello Servlet" + "</h2>");
 	}
 }
