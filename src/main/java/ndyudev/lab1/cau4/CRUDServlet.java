@@ -54,8 +54,6 @@ public class CRUDServlet extends HttpServlet {
 			message = "Không biết yêu cầu gì!";
 		}
 
-		// In ra màn hình
-//        resp.setContentType("application/json;charset=UTF-8");
 
 		resp.setContentType("text/html;charset=UTF-8");
 		resp.getWriter().println("<h2>" + message + "</h2>");
