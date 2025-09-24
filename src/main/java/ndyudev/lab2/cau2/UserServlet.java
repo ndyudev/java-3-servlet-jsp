@@ -1,4 +1,4 @@
-package ndyudev.lab1.cau3;
+package ndyudev.lab2.cau2;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -6,18 +6,20 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * Servlet implementation class Cau2
+ * Servlet implementation class UserServlet
  */
-@WebServlet("/lab1/cau3/*") // Path info /*
-public class UrlInfoServlet extends HttpServlet {
+@WebServlet("/lab2/cau2")
+public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public UrlInfoServlet() {
+	public UserServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -28,17 +30,15 @@ public class UrlInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+//		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		StringBuffer URL = request.getRequestURL();
-		String URI = request.getRequestURI();
-		String queryString = request.getQueryString();
-		String ServletPath = request.getContextPath();
-		String pathInfo = request.getPathInfo();
-		String method = request.getMethod();
-
-		response.getWriter().println("URL:" + URI + "\nURI:" + URI + "\nQuery String:" + queryString + "\nServlet Path:"
-				+ ServletPath + "\nPath Info:" + pathInfo + "\nMethod:" + method);
+		request.setAttribute("message", "Welcome to FPT!");
+		Map<String, Object> map = new HashMap<>();
+		map.put("fullname", "Châu Nhật Duy");
+		map.put("gender", "Male");
+		map.put("country", "Việt Nam");
+		request.setAttribute("user", map);
+		request.getRequestDispatcher("/view/lab2/cau2.jsp").forward(request, response);
 	}
 
 	/**
