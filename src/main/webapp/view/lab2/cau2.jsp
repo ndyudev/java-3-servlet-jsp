@@ -4,10 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Lab 2 | Cau 2</title>
 </head>
 <body>
-	<h2>${message}</h2>
-	<jsp:include page="/view/lab2/user-info.jsp" />
+	<div style="color: red; display:flex; align-items: center; justify-content: center;">
+		<h3>${message}</h3>
+		<jsp:include page="/view/lab2/user-info.jsp" />
+	</div>
 </body>
 </html>

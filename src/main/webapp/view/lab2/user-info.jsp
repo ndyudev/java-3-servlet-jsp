@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Lab 2 | Cau 2</title>
 </head>
 <body>
-	<b>YOUR INFORMATION:</b>
-	<ul>
-		<li>Fullname: ${user.fullname}</li>
-		<li>Gender: ${user.gender}</li>
-		<li>Country: ${user.country}</li>
+	<b>Thông tin cá nhân:</b>
+	<ul style="list-style: none;">
+		<li>Họ và tên: ${user.fullname}</li>
+		<li>Giới tính: ${user.gender}</li>
+		<li>Quốc tịch: ${user.country}</li>
 	</ul>
 </body>
 </html>

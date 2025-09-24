@@ -31,8 +31,11 @@ public class SharerServlet extends HttpServlet {
 			throws ServletException, IOException {
 //		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		request.setAttribute("message", "Xin chào FPT!");
-		request.setAttribute("now", new Date());
+		
+		String message = "Hello World! Java 3 Servlet JSP";
+		Date now = new Date();
+		request.setAttribute("message", message);
+		request.setAttribute("now", now);
 		request.getRequestDispatcher("/view/lab2/cau1.jsp").forward(request, response);
 	}
 

@@ -3,10 +3,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Lab 3 | Cau 3</title>
+<title>Lab 2 | Cau 4</title>
 </head>
 <body>
-    <form action="${pageContext.request.contextPath}/lab2/cau3/form/update" method="post">
+    <form action="${pageContext.request.contextPath}/lab2/cau4/form/update" method="post">
         <div>Fullname:</div>
         <input name="fullname" value="${user.fullname}"
                ${editabled ? "readonly" : ""}><br>
