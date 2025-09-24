@@ -33,11 +33,11 @@ public class UserServlet extends HttpServlet {
 //		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		request.setAttribute("message", "Welcome to FPT!");
-		Map<String, Object> map = new HashMap<>();
-		map.put("fullname", "Châu Nhật Duy");
-		map.put("gender", "Male");
-		map.put("country", "Việt Nam");
-		request.setAttribute("user", map);
+		Map<String, Object> user = new HashMap<>();
+		user.put("fullname", "Châu Nhật Duy");
+		user.put("gender", "Nam");
+		user.put("country", "Việt Nam");
+		request.setAttribute("user", user);
 		request.getRequestDispatcher("/view/lab2/cau2.jsp").forward(request, response);
 	}
 

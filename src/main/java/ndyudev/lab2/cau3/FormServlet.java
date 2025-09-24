@@ -31,13 +31,14 @@ public class FormServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		Map<String, Object> map = new HashMap<>();
-		map.put("fullname", "Châu Nhật Duy");
-		map.put("gender", true);
-		map.put("country", "VN");
-		request.setAttribute("user", map);
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		Map<String, Object> user = new HashMap<>();
+		user.put("fullname", "Châu Nhật Duy");
+		user.put("gender", false);
+		user.put("country", "VN");
+		request.setAttribute("user", user);
 		request.setAttribute("editabled", true);
+
 		request.getRequestDispatcher("/view/lab2/form-cau3.jsp").forward(request, response);
 	}
 
@@ -45,13 +46,12 @@ public class FormServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
 		String fullname = request.getParameter("fullname");
 		System.out.println(fullname);
-		request.getRequestDispatcher("/view/lab2/form-cau3.jsp").forward(request, response);
 	}
 
 }
