@@ -34,10 +34,10 @@ public class FormServlet extends HttpServlet {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		Map<String, Object> user = new HashMap<>();
 		user.put("fullname", "Châu Nhật Duy");
-		user.put("gender", false);
-		user.put("country", "VN");
+		user.put("gender", true);
+		user.put("country", "US");
 		request.setAttribute("user", user);
-		request.setAttribute("editabled", true);
+		request.setAttribute("editabled", false);
 
 		request.getRequestDispatcher("/view/lab2/form-cau3.jsp").forward(request, response);
 	}

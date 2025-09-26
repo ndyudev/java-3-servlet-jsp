@@ -11,13 +11,13 @@ import java.io.IOException;
  * Servlet implementation class FormServlet
  */
 @WebServlet("/lab2/cau4/form/update")
-public class FormServlet extends HttpServlet {
+public class Cau4FormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public FormServlet() {
+	public Cau4FormServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
