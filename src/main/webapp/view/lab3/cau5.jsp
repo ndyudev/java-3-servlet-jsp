@@ -20,11 +20,20 @@
 
 table, th, tr, td {
 	border: 1px black solid;
-	border-collapse: collapse;
 }
 
 th, td {
 	padding: 10px;
+}
+
+thead tr:hover {
+	background-color: silver;
+	cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: silver;
+    cursor: pointer;
 }
 
 a {
@@ -51,11 +60,15 @@ a {
 						<td>${item.idProduct}</td>
 						<td>${item.nameProduct}</td>
 						<td>${item.priceProduct}</td>
-						<td><a href="delete">Delete</a> <a href="edit">Edit</a></td>
+						<td><a
+							href="${pageContext.request.contextPath }/lab3/cau5/product?action=delete&id=${item.idProduct}">Delete</a>
+							<a
+							href="${pageContext.request.contextPath }/lab3/cau5/product?action=edit&id=${item.idProduct}">Edit</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
+		<p>${message }</p>
 	</div>
 </body>
 </html>

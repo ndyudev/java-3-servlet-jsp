@@ -31,15 +31,30 @@ public class Cau5Product extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		String action = request.getParameter("action");
+		String id = request.getParameter("id");
+//		System.out.println(action);
+//		System.out.println(id);
+		
+		
+		
 		List<Product> productList = new ArrayList<>();
 
 		productList.add(new Product("pd01", "Iphone 17 AIR", 15.554));
 		productList.add(new Product("pd02", "Iphone 17 Pro", 17.64));
 		productList.add(new Product("pd03", "Iphone 17 Pro Max", 29.94));
+		
+		if ("delete".equals(action)) {
+			request.setAttribute("message", "Bạn vừa xóa sản phẩm: " + id);
+		}
 
+		if ("edit".equals(action)) {
+			request.setAttribute("message", "Bạn vừa sửa sản phẩm: " + id);
+		}
+		
 		request.setAttribute("productList", productList);
 		request.getRequestDispatcher("/view/lab3/cau5.jsp").forward(request, response);
-
 	}
 
 	/**
