@@ -22,8 +22,7 @@
         <!-- Dùng URL hoàn chỉnh -->
         <img src="${fileUrl}" width="300"/>
 
-        <p><b>Đường dẫn vật lý:</b> ${path}\${filename}</p>
-        <p><b>URL truy cập trực tiếp:</b> <a href="${fileUrl}" target="_blank">${fileUrl}</a></p>
+        <p><b>Đường dẫn vật lý:</b> ${path}</p>
     </c:if>
 </body>
 </html>

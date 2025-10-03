@@ -29,7 +29,7 @@ public class C4UploadFile extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Part part = request.getPart("photo");
+    	Part part = request.getPart("photo");
         String path = request.getServletContext().getRealPath("images");
 
         File f = new File(path);
@@ -38,13 +38,12 @@ public class C4UploadFile extends HttpServlet {
         String filename = part.getSubmittedFileName();
         part.write(path + File.separator + filename);
 
-        // Gộp thành URL hoàn chỉnh
+        // Gộp thành URL để JSP hiển thị
         String fileUrl = request.getContextPath() + "/images/" + filename;
 
-        // Trả dữ liệu về JSP
-        request.setAttribute("fileUrl", fileUrl);
         request.setAttribute("filename", filename);
         request.setAttribute("path", path);
+        request.setAttribute("fileUrl", fileUrl);
 
         request.getRequestDispatcher("/view/lab4/cau4/UploadFile.jsp").forward(request, response);
     }
