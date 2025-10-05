@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Staff Info</title>
+    <title>Staff Info | Bean Ultil</title>
 </head>
 <body>
     <h2>Staff Info</h2>
