@@ -12,7 +12,11 @@ public class Staff {
     private int[] hobbies;
     private double salary;
 
-    // Constructor full tham số
+    // 🔹 Constructor không tham số
+    public Staff() {
+    }
+
+    // 🔹 Constructor đầy đủ
     public Staff(String fullName, int age, boolean gender, Date recruit, String country, String photo, int[] hobbies, double salary) {
         this.fullName = fullName;
         this.age = age;
@@ -24,11 +28,7 @@ public class Staff {
         this.salary = salary;
     }
 
-    // Constructor rỗng
-    public Staff() {
-    }
-
-    // Getter & Setter
+    // 🔹 Getter & Setter
     public String getFullName() {
         return fullName;
     }
@@ -91,5 +91,19 @@ public class Staff {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    // 🔹 Optional: toString() cho debug dễ
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "fullName='" + fullName + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", recruit=" + recruit +
+                ", country='" + country + '\'' +
+                ", photo='" + photo + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
