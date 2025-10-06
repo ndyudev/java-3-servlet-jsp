@@ -34,14 +34,14 @@ public class StaffServlet extends HttpServlet {
             dateConverter.setPattern("yyyy-MM-dd"); // format giống input HTML
             ConvertUtils.register(dateConverter, java.util.Date.class);
 
- 
+
             BeanUtils.populate(staff, request.getParameterMap());
 
             // Gửi sang trang hiển thị
             request.setAttribute("staff", staff);
             request.getRequestDispatcher("/view/lab5/slider/StaffInfo.jsp").forward(request, response);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new ServletException(e);
         }
     }
 }
