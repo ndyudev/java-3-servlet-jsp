@@ -28,9 +28,9 @@ public class MailFileServlet extends HttpServlet {
         int result = MailerFile.sendWithFile(from, to, subject, body, filePart);
 
         if (result < 0)
-            request.setAttribute("message", "❌ Send mail error!");
+            request.setAttribute("message", "Send mail error!");
         else
-            request.setAttribute("message", "✅ Send mail success!");
+            request.setAttribute("message", "Send mail success!");
 
         request.getRequestDispatcher("/view/lab5/mail/MailFileForm.jsp").forward(request, response);
     }
