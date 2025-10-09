@@ -19,8 +19,6 @@
     form {
         background: #fff;
         padding: 30px 40px;
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         width: 400px;
         display: flex;
         flex-direction: column;
@@ -34,14 +32,9 @@
         margin-bottom: 15px;
         padding: 10px 12px;
         border: 1px solid #ccc;
-        border-radius: 8px;
         font-size: 15px;
         outline: none;
         transition: 0.2s;
-    }
-    input:focus, textarea:focus {
-        border-color: #3b82f6;
-        box-shadow: 0 0 5px rgba(59,130,246,0.3);
     }
     textarea {
         resize: none;
@@ -53,12 +46,8 @@
         border: none;
         padding: 10px;
         font-size: 16px;
-        border-radius: 8px;
         cursor: pointer;
         transition: 0.2s;
-    }
-    button:hover {
-        background: #1e40af;
     }
     .msg {
         text-align: center;
@@ -76,7 +65,7 @@
 <body>
     <c:url value="/lab5/mail/sendmail" var="mail"/>
     <form action="${mail}" method="post"> 
-        <h2>📧 Send Mail</h2>
+        <h2>Send Mail</h2>
         <label>From:</label>
         <input name="from" value="chauunhatduyyit@gmail.com" required />
         

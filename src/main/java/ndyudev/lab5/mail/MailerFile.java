@@ -18,7 +18,7 @@ public class MailerFile {
             props.put("mail.smtp.port", "587");
 
             final String username = "chauunhatduyyit@gmail.com";
-            final String password = "cahouckivjazaavk";
+            final String password = "";
 
             Session session = Session.getInstance(props, new Authenticator() {
                 protected PasswordAuthentication getPasswordAuthentication() {
