@@ -24,7 +24,7 @@ public class LoginSession extends HttpServlet {
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("user")) { // cookie name "user" cho đồng bộ
+                if (cookie.getName().equals("user")) {
                     String encoded = cookie.getValue();
                     byte[] bytes = Base64.getDecoder().decode(encoded);
                     String[] userInfo = new String(bytes).split(",");
@@ -35,11 +35,9 @@ public class LoginSession extends HttpServlet {
                 }
             }
         }
-        // forward về lại trang login.jsp
         request.getRequestDispatcher("/view/lab5/cookie/LoginCookie.jsp").forward(request, response);
     }
 
-    // Khi người dùng submit form login
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -47,9 +45,8 @@ public class LoginSession extends HttpServlet {
         String password = request.getParameter("password");
         String remember = request.getParameter("remember-me");
 
-        // Kiểm tra login "ảo" cho ví dụ demo
         if ("ndyudev".equalsIgnoreCase(username) && "227".equals(password)) {
-            request.setAttribute("message", "✅ Login successfully!");
+            request.setAttribute("message", "Login successfully!");
             request.getSession().setAttribute("username", username);
 
             // Nếu có tick "Remember me" → lưu cookie
@@ -62,7 +59,7 @@ public class LoginSession extends HttpServlet {
                 response.addCookie(cookie);
             }
         } else {
-            request.setAttribute("message", "❌ Invalid login info!");
+            request.setAttribute("message", "Invalid login info!");
         }
 
         // Quay lại trang login.jsp
