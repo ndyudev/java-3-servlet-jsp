@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class JdbcHelper {
 	static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	static String dburl = "jdbc:sqlserver://localhost;databaseName=java3_servlet_jsp;encrypt=false;";
+	static String dburl = "jdbc:sqlserver://localhost;databaseName=code_lens_new;encrypt=false;";
 	static String username = "sa";
 	static String password = "ndyudev227";
 
@@ -57,52 +57,52 @@ public class JdbcHelper {
 	}
 
 	public static void main(String[] args) {
-		
+
 		try {
 			String sql = "SELECT * FROM NEWS WHERE CATEGORYID = ?";
-			Object[] values = {"ctgr01"};
+			Object[] values = { "ctgr01" };
 			ResultSet resultSet = JdbcHelper.executeQuery(sql, values);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
-//		/* truy vấn */
-//		try {
-//			String sql = "select * from employees where salary between ? and ?";
-//			Object[] values = { 4000, 6000 }; // mảng chứa các giá trị tham số ResultSet
-//			ResultSet resultSet = JdbcHelper.executeQuery(sql, values);
-//			while (resultSet.next()) {
-//				String fullname = resultSet.getString("fullname"); // thay column bằng tên cột trong bảng
-//				Double salary = resultSet.getDouble("salary");
-//				System.out.println(fullname + " - " + salary);
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		/* cap nhat */
-//		try {
-//			String sql = "update employees set salary = ? where id = ?"; // thử từng câu
-//			Object[] values = { 5050.0, "em01" };
-//			int rows = JdbcHelper.executeUpdate(sql, values);
-//			System.out.println(rows);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		/* goi ham */
-//		String sql = "{Call sp_salary_report(?,?)}";
-//		try {
-//			ResultSet rs = JdbcHelper.executeCallQuery(sql, 2024, 2024);
-//			while (rs.next()) {
-//				String departmentName = rs.getString("departmentName"); // thay column bằng tên cột trong bảng
-//				Double sum = rs.getDouble("SumSalary");
-//				System.out.println(departmentName + " - " + sum);
-//			}
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//
+
+		/* truy vấn */
+		try {
+			String sql = "select * from employees where salary between ? and ?";
+			Object[] values = { 4000, 6000 }; // mảng chứa các giá trị tham số ResultSet
+			ResultSet resultSet = JdbcHelper.executeQuery(sql, values);
+			while (resultSet.next()) {
+				String fullname = resultSet.getString("fullname"); // thay column bằng tên cột trong bảng
+				Double salary = resultSet.getDouble("salary");
+				System.out.println(fullname + " - " + salary);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		/* cap nhat */
+		try {
+			String sql = "update employees set salary = ? where id = ?"; // thử từng câu
+			Object[] values = { 5050.0, "em01" };
+			int rows = JdbcHelper.executeUpdate(sql, values);
+			System.out.println(rows);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		/* goi ham */
+		String sql = "{Call sp_salary_report(?,?)}";
+		try {
+			ResultSet rs = JdbcHelper.executeCallQuery(sql, 2024, 2024);
+			while (rs.next()) {
+				String departmentName = rs.getString("departmentName"); // thay column bằng tên cột trong bảng
+				Double sum = rs.getDouble("SumSalary");
+				System.out.println(departmentName + " - " + sum);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }
