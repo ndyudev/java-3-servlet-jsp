@@ -104,7 +104,7 @@
             <c:forEach var="dp" items="${listDepartments}">
                 <option value="${dp.id}" ${dp.id.equals(item.departmentid)?'selected':''}>${dp.name}</option>
             </c:forEach>
-        </select>
+       </select>
 
         <label>Salary:</label>
         <input name="salary" type="text" value="${item.salary}" />
