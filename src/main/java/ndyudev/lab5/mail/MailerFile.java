@@ -34,7 +34,7 @@ public class MailerFile {
                 @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
                     String username = "chauunhatduyyit@gmail.com";
-                    String password = "tttbdlhxyposrzkc"; // App password Gmail
+                    String password = ""; // App password Gmail
                     return new PasswordAuthentication(username, password);
                 }
             });

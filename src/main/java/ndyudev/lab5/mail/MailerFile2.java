@@ -32,7 +32,7 @@ public class MailerFile2 {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
 				String username = "chauunhatduyyit@gmail.com";
-				String password = "tttbdlhxyposrzkc";
+				String password = "";
 				return new PasswordAuthentication(username, password);
 			}
 		});
