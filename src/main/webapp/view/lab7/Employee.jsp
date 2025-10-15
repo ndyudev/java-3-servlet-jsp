@@ -120,7 +120,6 @@
         </div>
     </form>
 
-    <!-- TABLE -->
     <table>
         <thead>
             <tr>
